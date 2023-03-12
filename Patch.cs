@@ -1,13 +1,6 @@
 using HarmonyLib;
-using Il2CppInterop.Runtime;
-using Il2CppSystem;
 using NoIntro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 class Patch
 {
@@ -55,37 +48,4 @@ class Patch
         }
         return;
     }
-
-    [HarmonyPatch(typeof(SceneManager))]
-    //[HarmonyPatch("Push")]
-    //[HarmonyPatch("Clear")]
-    //[HarmonyPatch("CurrentSceneDestroy")]
-    //[HarmonyPatch("CurrentScenePause")]
-    //[HarmonyPatch("ApplicationQuit")]
-    //[HarmonyPatch("RebootApplication")]
-    //[HarmonyPatch("OnFadeoutOfReboot")]
-    //[HarmonyPatch("Awake")]
-    //[HarmonyPatch("Start")]
-    //[HarmonyPatch("idle")]
-    //[HarmonyPatch("read")]
-    //[HarmonyPatch("OnFinishedLoad")]
-    //[HarmonyPatch("OnDestroy")]
-    //[HarmonyPatch("_DestroyCurrentScene")]
-    //[HarmonyPatch("Update")]
-    [HarmonyPatch(new System.Type[] { })]
-    [HarmonyPostfix]
-    static void alala(MethodBase __originalMethod)
-    {
-        Plugin.Logger.LogMessage(__originalMethod.Name + " called");
-    }
-
-
-    //UI Root/ui/common_message_window_ui_root/ui/common_message_window_ui_00_R/Root/Anim/
-
-    // uCommonMessageWindow;
-
-    // UIRoot;
-
-
-
 }
